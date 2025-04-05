@@ -1,0 +1,19 @@
+table_name: shipment_transaction
+type: transactional
+primary_key: [shipment_id]
+count: 20
+fields:
+  shipment_id:
+    type: code
+    pattern: "SHIP-{seq:4}"
+    unique: true
+  from_location_id:
+    type: ref
+    table: location_master
+    field: location_id
+  to_location_id:
+    type: ref
+    table: location_master
+    field: location_id
+  shipment_date:
+    type: date

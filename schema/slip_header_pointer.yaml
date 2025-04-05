@@ -1,0 +1,5 @@
+table_name: slip_header_pointer
+type: pointer
+source_table: slip_header
+key: [slip_number]
+latest_field: version

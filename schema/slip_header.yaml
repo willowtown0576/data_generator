@@ -1,0 +1,22 @@
+table_name: slip_header
+type: immutable
+primary_key: [slip_number, version]
+count: 10
+version_range: 1~2
+fields:
+  slip_number:
+    type: code
+    pattern: "SLIP-{seq:4}"
+    unique: true
+  from_location_id:
+    type: ref
+    table: location_master
+    field: location_id
+  to_location_id:
+    type: ref
+    table: location_master
+    field: location_id
+  version:
+    type: version_sequence
+  shipment_date:
+    type: date

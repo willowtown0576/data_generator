@@ -1,0 +1,12 @@
+table_name: location_master
+type: master
+primary_key: [location_id]
+count: 5
+fields:
+  location_id:
+    type: code
+    pattern: "LOCATION-{alpha}"
+    unique: true
+  location_name:
+    type: const
+    value: "ロケーション"

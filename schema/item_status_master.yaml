@@ -1,0 +1,10 @@
+table_name: item_status_master
+type: master
+primary_key: [item_status_id]
+records:
+  - item_status_id: GOOD
+    item_status_name: 良品
+  - item_status_id: DEFECT
+    item_status_name: 不良品
+  - item_status_id: HOLD
+    item_status_name: 保留

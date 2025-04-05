@@ -1,0 +1,12 @@
+table_name: item_master
+type: master
+primary_key: [item_id]
+count: 5
+fields:
+  item_id:
+    type: code
+    pattern: "ITEM-{seq:3}"
+    unique: true
+  item_name:
+    type: const
+    value: "商品"

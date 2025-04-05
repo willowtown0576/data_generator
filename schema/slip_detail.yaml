@@ -1,0 +1,25 @@
+table_name: slip_detail
+type: immutable
+primary_key: [slip_number, detail_no]
+parent: slip_header
+parent_key: slip_number
+count_per_parent: 1~3
+fields:
+  slip_number:
+    type: ref
+    table: slip_header
+    field: slip_number
+  version:
+    type: ref
+    table: slip_header
+    field: version
+  detail_no:
+    type: auto_increment
+  item_id:
+    type: ref
+    table: item_master
+    field: item_id
+  quantity:
+    type: int
+    min: 1
+    max: 100

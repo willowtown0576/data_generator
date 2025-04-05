@@ -1,0 +1,22 @@
+table_name: inventory
+type: immutable
+primary_key: [location_id, item_id, version]
+count: 10
+version_range: 1~3
+fields:
+  location_id:
+    type: ref
+    table: location_master
+    field: location_id
+  item_id:
+    type: ref
+    table: item_master
+    field: item_id
+  quantity:
+    type: int
+    min: 0
+    max: 1000
+  version:
+    type: version_sequence
+  updated_at:
+    type: timestamp
